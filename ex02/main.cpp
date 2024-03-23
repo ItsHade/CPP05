@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 int main(void)
 {
@@ -15,16 +15,5 @@ int main(void)
     b.incrementGrade();
     std::cout << b; 
 
-    {
-        std::cout << std::endl;
-        Form f("important form", 50, 20);
-        Form f1("more important form", 50, 20);
-        Form fBad("bad form", 160, 120);
-
-        a.signForm(f);
-        b.signForm(f1);
-        std::cout << f;
-
-    }
     return (0);
 }
