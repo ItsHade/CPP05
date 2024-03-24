@@ -1,4 +1,4 @@
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp AForm.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

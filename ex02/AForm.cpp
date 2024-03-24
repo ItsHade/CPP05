@@ -85,6 +85,14 @@ void AForm::beSigned(Bureaucrat const & b)
 
 }
 
+void AForm::execute(Bureaucrat const & executor) const
+{
+    // int arraySize = 3;
+    // void (AForm::*ptr[])() = {&ShrubberyCreationForm::execute, &RobotomyRequestForm::execute, &PresidentialPardonForm::execute};
+    // std::string array[arraySize] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
+    (void)executor;
+}
+
 const char* AForm::GradeTooHighException::what() const throw()
 {
     return ("EXCEPTION THROWN: AForm grade is too high!");

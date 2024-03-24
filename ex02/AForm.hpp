@@ -5,7 +5,6 @@
 #include <string>
 #include "Bureaucrat.hpp"
 
-
 class Bureaucrat;
 
 class AForm
@@ -25,6 +24,7 @@ public :
     bool getSigned(void) const;
 
     void beSigned(Bureaucrat const & b);
+    virtual void execute(Bureaucrat const & executor) const;
 
     class GradeTooHighException : public std::exception {
         public :
@@ -36,7 +36,7 @@ public :
             virtual const char* what() const throw();
     };
 
-private :
+protected :
 
     std::string const _name;
     unsigned int const _gradeToSign;

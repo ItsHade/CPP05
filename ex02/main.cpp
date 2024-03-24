@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
@@ -15,5 +16,10 @@ int main(void)
     b.incrementGrade();
     std::cout << b; 
 
+
+    ShrubberyCreationForm sForm("home");
+
+    sForm.execute(a);
+    
     return (0);
 }
