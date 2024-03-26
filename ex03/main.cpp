@@ -3,6 +3,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -45,5 +46,19 @@ int main(void)
     lvl26.executeForm(rForm);
     lvl26.executeForm(pForm); 
     president.executeForm(pForm);
+
+    std::cout << "\nInter tests: " << std::endl;
+
+    {
+        Intern someRandomIntern;
+
+        AForm* rrf;
+        AForm* invalidForm;
+        rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
+        invalidForm = someRandomIntern.makeForm("HAHAHFORM", "uselessTarget");
+
+        president.signForm(*rrf);
+        delete rrf;
+    }
     return (0);
 }
